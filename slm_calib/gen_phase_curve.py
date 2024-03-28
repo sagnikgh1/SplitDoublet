@@ -60,11 +60,11 @@ def parse_args():
                         help='Camera id')
     
     # Display id
-    parser.add_argument('-d', '--disp_id', default=1, type=int,
+    parser.add_argument('-d', '--display_id', default=1, type=int,
                         help='Display id')
     
     # Display name
-    parser.add_argument('-w', '--disp_name', default='SLM Window',
+    parser.add_argument('-w', '--display_name', default='SLM Window',
                         help='Display name')
 
     
