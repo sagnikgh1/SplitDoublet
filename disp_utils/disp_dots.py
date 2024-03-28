@@ -63,7 +63,7 @@ def disp_pattern(args):
     display = hardware.Display(args.display_id, args.display_name)
     Hd, Wd = display.shape
 
-    pattern = dots(args, Hd, Wd)*255
+    pattern = dots(args, int(Hd), int(Wd))*255
     
     # Convert to red
     pattern[:,:,1:] = 0

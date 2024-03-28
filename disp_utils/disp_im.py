@@ -26,7 +26,7 @@ def parse_args(config_name="config.ini"):
     parser = argparse.ArgumentParser(description='Calibration data capture')
 
     # Display id
-    parser.add_argument('-d', '--display_id', default=1, type=int,
+    parser.add_argument('-d', '--display_id', default=2, type=int,
                         help='Display id')
     
     # Display name
@@ -34,7 +34,7 @@ def parse_args(config_name="config.ini"):
                         help='Display name')
     
     # Dot width
-    parser.add_argument('-i', '--im_path', default="./sample_imgs/dots_red.png",
+    parser.add_argument('-i', '--im_path', default="./sample_imgs/bullseye.png",
                         help='Image path')
 
     
@@ -55,6 +55,10 @@ def disp_pattern(args):
     Hd, Wd = display.shape
 
     pattern = cv2.imread(args.im_path)
+    pattern = cv2.resize(pattern, (Hd,Wd))
+
+    # Convert to red
+    pattern[:,:,1:] = 0
     
 
     while True:

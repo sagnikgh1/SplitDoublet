@@ -25,7 +25,7 @@ def parse_args(config_name="config.ini"):
     parser = argparse.ArgumentParser(description='Calibration data capture')
 
     # Display id
-    parser.add_argument('-d', '--display_id', default=1, type=int,
+    parser.add_argument('-d', '--display_id', default=2, type=int,
                         help='Display id')
     
     # Display name
@@ -34,7 +34,7 @@ def parse_args(config_name="config.ini"):
     
     # Dot width
     parser.add_argument('-w', '--width', default=5,
-                        help='Dot spacing')
+                        help='Dot width')
 
     
     # Now parse
